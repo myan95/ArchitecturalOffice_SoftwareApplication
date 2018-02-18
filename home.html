@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Innovative Designs - Home</title>
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+    </head>
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="home.html">Home</a>
+           
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="registration.php" style="float:right">Register</a>
+            <a href="login.php" style="float:right">Log In</a>
+        </div>
+        
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+
+                <img src="images/1.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="images/2.jpg" style="width:100%">
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="images/4.jpg" style="width:100%">
+
+            </div>
+            
+            <div class="mySlides fade">
+
+                <img src="images/3.jpg" style="width:100%">
+
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="images/5.jpg" style="width:100%">
+
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+        </div>
+        
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none"; 
+                }
+                slideIndex++;
+                if (slideIndex> slides.length) {slideIndex = 1} 
+                slides[slideIndex-1].style.display = "block"; 
+                setTimeout(showSlides, 3000); // Change image every 3 seconds
+            }
+        </script>
+        
+    </body>
+    
+    
+
+
+</html>
